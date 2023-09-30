@@ -2,7 +2,7 @@ from googleapiclient.discovery import build
 import pandas as pd
 import time
 import psycopg2 as pc
-import boto3 as bt
+#import boto3 as bt
 
 #request data from youtube api
 def get_data():
@@ -43,21 +43,19 @@ def load_data(sdata):
     df = pd.DataFrame(sdata)
     timestamp = time.strftime('%d%m%Y_%H%M%S')
     filename = "YTdata_" + timestamp + ".csv"
-    df.to_csv(filename)
-    #df.to_csv("s3://yt-airflow-bucket/" + filename)
+    #df.to_csv(filename)
+    df.to_csv("s3://yt-airflow-bucket/" + filename)
 f3 = load_data(f2)
-print(f3)
+#print(f3)
 
-
-import psycopg2 as pc
 #view as structured data in cloud database
 def structure_data():
     # Create a connection to Amazon Redshift without SSL
     conn = pc.connect(
         host='yt-data.056665044923.ap-south-1.redshift-serverless.amazonaws.com',
         port=5439,
-        user='admin',
-        password='Admin12345',
+        user='***********',
+        password='************',
         database='dev',
     )
 
@@ -98,4 +96,5 @@ def structure_data():
         conn.rollback()
         print(f"Error: {str(e)}")
 
-print(structure_data())
+f4 = structure_data()
+#print(structure_data())
