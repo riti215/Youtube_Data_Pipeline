@@ -31,16 +31,16 @@ step1 = PythonOperator(
 step2 = PythonOperator(
     task_id='transform_source_data',
     python_callable=yt.transform_data,
-    provide_context=True,
-    op_args=yt.f1,
+    #provide_context=True,
+    op_args=[yt.f1],
     dag=dag, 
 )
 
 step3 = PythonOperator(
     task_id='load_transformed_data',
     python_callable=yt.load_data,
-    provide_context=True,
-    op_args=yt.f2,  
+    #provide_context=True,
+    op_args=[yt.f2],  
     dag=dag, 
 )
 
