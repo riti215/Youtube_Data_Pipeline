@@ -8,7 +8,8 @@ This end-to-end pipeline ensures seamless data extraction, transformation, stora
 # Technology Used
 1. Youtube API
 2. Programming Language - Python, SQL
-3. Amazon Web Service (AWS) - S3 (Simple Storage Service), Redshift
+3. File format = JSON, CSV
+4. Amazon Web Service (AWS) - EC2, S3 (Simple Storage Service), Redshift
 
 
 # Youtube Data Pipeline DAG (Workflow) - Output
