@@ -1,4 +1,4 @@
-The Project involves extracting data from YouTube using the YouTube API. Python is used to transform the collected raw data. The project is deployed on Airflow with EC2 instance for automation. The final transformed data is stored on Amazon S3 for easy access and backup. Additionally, the project loads the structured/tabular data into Amazon Redshift for further analysis and querying, creating a comprehensive data pipeline.
+The Project involves extracting data from YouTube using the YouTube API. Python is used to transform the collected raw data. It is deployed on Airflow with EC2 instance for automation. The final transformed data is stored on Amazon S3 for easy access and backup. Additionally, the project loads the structured/tabular data into Amazon Redshift for further analysis and querying, creating a comprehensive data pipeline.
 
 This end-to-end pipeline ensures seamless data extraction, transformation, storage, and integration, enabling valuable insights from YouTube data to be easily accessible and analyzed in a structured format.
 
