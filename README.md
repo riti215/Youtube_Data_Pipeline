@@ -8,10 +8,7 @@ This end-to-end pipeline ensures seamless data extraction, transformation, stora
 # Technology Used
 1. Youtube API
 2. Programming Language - Python, SQL
-3. Amazon Web Service (AWS)
-  o	S3 (Simple Storage Service)
-  o	Redshift
-
+3. Amazon Web Service (AWS) - S3 (Simple Storage Service), Redshift
 
 # Youtube Data Pipeline DAG (Workflow) - Output
 ![image](https://github.com/riti215/Youtube_Data_Pipeline/assets/57587827/9e18f305-2796-4ed5-bfe5-8d29f9e7064b)
